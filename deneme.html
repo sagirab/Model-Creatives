@@ -29,13 +29,14 @@
     }
     .video-flex {
       display: flex;
-      gap: 20px; /* space between videos */
-      justify-content: center;
-      flex-wrap: wrap;
+      gap: 20px;        /* space between videos */
+      justify-content: flex-start;
+      flex-wrap: nowrap; /* prevent wrapping */
+      overflow-x: auto;  /* add horizontal scrolling if too many videos */
     }
     .video-flex video {
-      width: 100%;
-      max-width: 300px; /* shrink width so two can fit side by side */
+      max-width: 300px;
+      flex: 0 0 auto; /* keep fixed size, don’t shrink */
       border-radius: 8px;
     }
     .note {
