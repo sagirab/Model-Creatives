@@ -27,14 +27,16 @@
       background-color: #f0f0f0;
       text-align: center;
     }
-    .video-block iframe,
-    .video-block video {
+    .video-flex {
+      display: flex;
+      gap: 20px; /* space between videos */
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .video-flex video {
       width: 100%;
-      max-width: 480px;
-      height: 270px;
+      max-width: 300px; /* shrink width so two can fit side by side */
       border-radius: 8px;
-      display: block;
-      margin: 10px auto;
     }
     .note {
       font-size: 14px;
@@ -55,34 +57,30 @@
       <th>Notes</th>
     </tr>
 
+    <!-- Row with two videos side by side -->
     <tr>
       <td>Transitions</td>
-      <td>Quick outfit change using jump cut</td>
-      <td class="video-block">
-        <video width="480" height="270" controls>
-          <source src="videos/975105951.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
+      <td>Quick outfit change & short skit</td>
+      <td>
+        <div class="video-flex">
+          <video controls>
+            <source src="videos/975105951.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <video controls>
+            <source src="videos/560269004.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
       </td>
-      <td class="note">Focus on syncing movement with beat drop.</td>
+      <td class="note">Focus on syncing with music & delivering punchline.</td>
     </tr>
 
-    <tr>
-      <td>Storytelling</td>
-      <td>Short skit with voiceover</td>
-      <td class="video-block">
-        <video width="480" height="270" controls>
-          <source src="videos/560269004.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      </td>
-      <td class="note">Try to replicate the pacing and punchline delivery.</td>
-    </tr>
-
+    <!-- Row with single video -->
     <tr>
       <td>Lifestyle</td>
       <td>Daily vlog snippet</td>
-      <td class="video-block">
+      <td>
         <video controls>
           <source src="videos/sample.mp4" type="video/mp4">
           Your browser does not support the video tag.
