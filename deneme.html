@@ -1,29 +1,97 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Video References</title>
+  <title>Video Reference List</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 40px; }
-    .video-block { margin-bottom: 50px; }
-    iframe { width: 100%; max-width: 600px; height: 340px; }
-    .note { margin-top: 10px; color: #555; }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+      background: #f9f9f9;
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      vertical-align: top;
+    }
+    th {
+      background-color: #f0f0f0;
+      text-align: center;
+    }
+    .video-block iframe,
+    .video-block video {
+      width: 100%;
+      max-width: 480px;
+      height: 270px;
+      border-radius: 8px;
+      display: block;
+      margin: 10px auto;
+    }
+    .note {
+      font-size: 14px;
+      color: #555;
+      margin-top: 5px;
+    }
   </style>
 </head>
 <body>
-  <h1>Video Reference List for Creators</h1>
 
-  <div class="video-block">
-    <h2>Video 1 – TikTok Hook Idea</h2>
-    <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" frameborder="0" allowfullscreen></iframe>
-    <p class="note">Try to replicate the fast-paced intro and background music style.</p>
-  </div>
+  <h1>Video References for Creators</h1>
 
-  <div class="video-block">
-    <h2>Video 2 – Transition Style</h2>
-    <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" frameborder="0" allowfullscreen></iframe>
-    <p class="note">Focus on the seamless outfit change and camera movement.</p>
-  </div>
+  <table>
+    <tr>
+      <th>Niche</th>
+      <th>Description</th>
+      <th>Video Example</th>
+      <th>Notes</th>
+    </tr>
+
+    <tr>
+      <td>Transitions</td>
+      <td>Quick outfit change using jump cut</td>
+      <td class="video-block">
+        <video width="480" height="270" controls>
+          <source src="videos/975105951.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </td>
+      <td class="note">Focus on syncing movement with beat drop.</td>
+    </tr>
+
+    <tr>
+      <td>Storytelling</td>
+      <td>Short skit with voiceover</td>
+      <td class="video-block">
+        <video width="480" height="270" controls>
+          <source src="videos/560269004.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </td>
+      <td class="note">Try to replicate the pacing and punchline delivery.</td>
+    </tr>
+
+    <tr>
+      <td>Lifestyle</td>
+      <td>Daily vlog snippet</td>
+      <td class="video-block">
+        <video controls>
+          <source src="videos/sample.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </td>
+      <td class="note">Keep it natural and handheld style.</td>
+    </tr>
+
+  </table>
 
 </body>
 </html>
