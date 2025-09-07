@@ -127,6 +127,30 @@
   font-weight: bold;
 }
 
+.numbers {
+  color: #8d225d;
+  background: #c2ebec;
+  padding: 3px 3px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+
+/* Auto-number inside each row */
+.video-section { counter-reset: item; }
+
+.video-section .video-item .video-note::before {
+  counter-increment: item;
+  content: var(--section) counter(item);
+  font-weight: 700;
+  display: inline-block;
+  padding: 2px 6px;
+  border-radius: 6px;
+  background: #eef2ff;
+  color: #1d4ed8;
+  margin-right: 6px;
+}
+
     /* Extra polish for very small screens */
     @media (max-width: 480px) {
       body { margin: 10px; }
@@ -171,7 +195,7 @@
   <td>Meme Açma</td>
   <td>RESİMLER DOSYASINDAKI TÜM KOMBİNLERLE YAPILABİLİR. Meme açma kapama. Sütyeni indir, oynaş, sallan, sütyeni geri kapat, oynaş sallan geri indir vs. 2-3 dakika bu şekilde değişik açılarda, değişik yerlerde, farklı kombinlerle videolar çekebilirsin.</td>
   <td>
-    <div class="video-flex">
+     <div class="video-flex video-section" style="--section:'1.'">
       
       <div class="video-item">
         <video controls playsinline preload="metadata">
@@ -234,7 +258,7 @@
           <source src="videos/ProductivePerfumedBluefintuna.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
-        <div class="video-note"></div>
+        <div class="video-note"><h5 class="numbers">1.8</h5></div>
       </div>
 
 
@@ -365,7 +389,7 @@
   <td>Göt Açma</td>
   <td>RESİMLER DOSYASINDAKI TÜM KOMBİNLERLE YAPILABİLİR. Göt açma kapama. İç çamaşırını indir, oynaş, sallan, hareket et, iç çamaşırını geri giy. 2-3 dakika bu şekilde değişik açılarda, değişik yerlerde, farklı kombinlerle videolar çekebilirsin. AMIN TAMAMI / BÜYÜK KISMI GÖSTERİLMEYECEK, BU KONUDA DİKKATLİ OLUNACAK.</td>
   <td>
-    <div class="video-flex">
+    <div class="video-flex video-section" style="--section:'2.'">
 
 
       <div class="video-item">
@@ -607,7 +631,7 @@
   <td>Genel Göt</td>
   <td>RESİMLER DOSYASINDAKI TÜM KOMBİNLERLE YAPILABİLİR. Videoların altındaki notları dikkate alabilirsin.</td>
   <td>
-    <div class="video-flex">
+    <div class="video-flex video-section" style="--section:'3.'">
 
 
       <div class="video-item">
@@ -1032,7 +1056,7 @@
   <td>Ayak</td>
   <td>RESİMLER DOSYASINDAKI TÜM KOMBİNLERLE YAPILABİLİR. Genel olarak ayağın odakta olduğu görüntüler.</td>
   <td>
-    <div class="video-flex">
+    <div class="video-flex video-section" style="--section:'4.'">
 
 
       <div class="video-item">
@@ -1191,7 +1215,7 @@
   <td>Topuklu Ayakkabı</td>
   <td>RESİMLER DOSYASINDAKI TÜM KOMBİNLERLE YAPILABİLİR. TOPUKLU AYAKKABIYLA ÇEKİNEBİLECEĞİN AÇILAR. Aslında bu dosyadaki diğer tüm açıları, tüm videoları topuklu ayakkabı giyerek çekebilirsin. Kişiliğine göre neyi seversen.</td>
   <td>
-    <div class="video-flex">
+    <div class="video-flex video-section" style="--section:'5.'">
 
 
       <div class="video-item">
@@ -1304,7 +1328,7 @@
   <td>Banyo</td>
   <td>Tshirt ile veya çıplak, banyoda çekinebileceğin açılar. Sen de daha yaratıcı olup istediğin herhangi bir sahneyi canlandırabilirsin. Islak elbiseler, soyunup ıslanma vs vs. Aklına ne gelirse.</td>
   <td>
-    <div class="video-flex">
+    <div class="video-flex video-section" style="--section:'6.'">
       
       <div class="video-item">
         <video controls playsinline preload="metadata">
@@ -1421,7 +1445,7 @@
   <td>Genel Meme</td>
   <td>RESİMLER DOSYASINDAKI TÜM KOMBİNLERLE YAPILABİLİR.</td>
   <td>
-    <div class="video-flex">
+    <div class="video-flex video-section" style="--section:'7.'">
 
       <div class="video-item">
         <video controls playsinline preload="metadata">
@@ -1684,7 +1708,7 @@
 File Çorap</td>
   <td>Herhangi bir taz kilotlu çorap, file, vücut çorabı vs giymeli. TÜM SAYFADAKİ TÜM VİDEOLARI BU KOMBİNLERİ GİYEREK YAPABİLİRSİN. Laf olsun torba dolsun diye ayrı bölüm açıp örnek koydum.</td>
   <td>
-    <div class="video-flex">
+    <div class="video-flex video-section" style="--section:'8.'">
 
 
       <div class="video-item">
@@ -1850,7 +1874,7 @@ File Çorap</td>
   <td>Tayt, şort vs.</td>
   <td>TAYT VS GIYEREK BU DOSYADAKI TÜM VİDEOLARI YAPABİLİRSİN. Yandaki VİDEOLAR ÖRNEK OLSUN, kombini hatırlatsın diye var.</td>
   <td>
-    <div class="video-flex">
+    <div class="video-flex video-section" style="--section:'9.'">
       
       <div class="video-item">
         <video controls playsinline preload="metadata">
@@ -1899,7 +1923,7 @@ File Çorap</td>
   <td>TAKIM İÇ ÇAMAŞIRI SETİ</td>
   <td>BU DOSYADAKI TÜM VİDEOLARI YAPABİLİRSİN. Yandakiler sadece örnek ve kombini hatırlatması için var. TAKIM İÇ ÇAMAŞIRI GİYEREK, KIRMIZI, SİYAH YEŞİL VS.</td>
   <td>
-    <div class="video-flex">
+    <div class="video-flex video-section" style="--section:'10.'">
       
       <div class="video-item">
         <video controls playsinline preload="metadata">
@@ -1992,7 +2016,7 @@ File Çorap</td>
   <td>POV - Kadın Gözünden</td>
   <td>Senin gözünden video da çekebilirsin. Elzem değil, olursa kullanırız.</td>
   <td>
-    <div class="video-flex">
+    <div class="video-flex video-section" style="--section:'11.'">
       <div class="video-item">
         <video controls playsinline preload="metadata">
           <source src="videos/DimFearlessBat.mp4" type="video/mp4">
@@ -2009,7 +2033,7 @@ File Çorap</td>
   <td>Birlikte</td>
   <td>Birlikte çekinebileceğin ortam varsa beraber istediğiniz tarzda çeşitli kombinlerle istediğiniz mekanda video çekebilirsiniz.</td>
   <td>
-    <div class="video-flex">
+    <div class="video-flex video-section" style="--section:'12.'">
       <div class="video-item">
         <video controls playsinline preload="metadata">
           <source src="videos/ShinyMistyHairstreakbutterfly.mp4" type="video/mp4">
@@ -2058,7 +2082,7 @@ File Çorap</td>
   <td>Aheago yüz ifadesi</td>
   <td>Herhangi bir pozisyonda bu yüz ifadelerini yaparsan ayrıca kesip farklı fetiş nişlerinde paylaşıp trafik sağlayabiliriz.</td>
   <td>
-    <div class="video-flex">
+    <div class="video-flex video-section" style="--section:'13.'">
       <div class="video-item">
         <video controls playsinline preload="metadata">
           <source src="videos/FunnyHatefulEft.mp4" type="video/mp4">
@@ -2114,7 +2138,7 @@ File Çorap</td>
   <td>STRAPON</td>
   <td>Varsa takmalı yoksa normal dildoyla BU SAYFADAKİ HERHANGİ BİR İÇERİĞİ YENİDEN CANLANDIRABİLİRSİN.</td>
   <td>
-    <div class="video-flex">
+    <div class="video-flex video-section" style="--section:'14.'">
       <div class="video-item">
         <video controls playsinline preload="metadata">
           <source src="videos/GlitteringShamelessGhostshrimp.mp4" type="video/mp4">
